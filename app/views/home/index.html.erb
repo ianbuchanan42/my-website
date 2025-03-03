@@ -1,10 +1,52 @@
-<div class="min-h-screen bg-gray-100">
-  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-    <div class="bg-white overflow-hidden shadow rounded-lg">
-      <div class="px-4 py-5 sm:p-6">
-        <h1 class="text-3xl font-bold text-gray-900">Welcome to My Website</h1>
-        <p class="mt-4 text-lg text-gray-500">This is a Rails application with Vite, Hotwire, and Tailwind CSS.</p>
-      </div>
+
+
+<section id="about" class="mb-16">
+  <h2 class="text-3xl font-bold mb-6">I am a...</h2>
+  <p class="text-lg text-gray-700">
+    Innovative software engineer focused on building accessible, inclusive digital experiences. 
+    Combines full-stack development expertise with a passion for accessibility best practices and technical leadership.
+  </p>
+</section>
+
+<section id="projects" class="py-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <%= render(ProjectComponent.new(
+        title: "A11y Root",
+        image_url: "https://a11yroot.dev/assets/roots-C-KyXtqP.svg",
+        summary: "A11y Root is a VS Code Extension paired with a Companion Web Dashboard that streamlines accessibility analysis and fosters collaboration across development teams by exposing accessibility insights and enabling seamless communication between developers, designers, and stakeholders.",
+        tech_stack: [ "React", "TypeScript", "Node.js", "MongoDB","VS Code API"],
+        github_url: "https://github.com/oslabs-beta/a11y-root",
+        website_url: "https://a11yroot.dev"
+      )) %>
+      
+      <%= render(ProjectComponent.new(
+        title: "Alt Sprout Dance",
+        image_url: "https://altsprout.dance/assets/alt_sprout_dance_icon-BtSw_Tbb.png",
+        summary: "Alt Sprout Dance is an AI-powered alt text generator designed to create meaningful and accessible image descriptions. Developed in collaboration with Smuin Contemporary Ballet, it enhances the quality and efficiency of content creation for visually rich platforms.",
+        tech_stack: ["Vue.js", "Koa.js","Supabase", "OpenAI API"],
+        website_url: "https://altsprout.dance/",
+        github_url: "https://github.com/Taz-AiAccessibility/Alt-Sprout-Vue-Koa"
+      )) %>
+
+      <%= render(ProjectComponent.new(
+        title: "EmmaR Designs",
+        image_url: "https://emmardesigns.com/assets/logo.png",
+        summary: "A portfolio website showcasing UX/UI design work, including projects for Worldwide Ballet Class, Coursera, and Noah Frisch Design & Woodcraft. The site demonstrates expertise in creating solutions for human problems surrounding learning and communication.",
+        tech_stack: ["HTML", "CSS"],
+        website_url: "https://emmardesigns.com/"
+      )) %>
+
+      <%= render(ProjectComponent.new(
+        title: "Fully Tactile Art SF",
+        image_url: "https://fullytactileartsf.org/assets/logo.png",
+        summary: "This project is a response to the continuous trend of art being enjoyed through vision, instead of also being experienced through touch and other senses. We aim to create a space for artists and patrons to explore what it truly means to \"see\" art beyond the visual.",
+        tech_stack: ["Next.js", "Tailwind CSS", "TypeScript", "Node.js"],
+        website_url: "https://fullytactileartsf.org/",
+        github_url: "https://github.com/ianbuchanan42/fully-tactile-art-sf"
+      )) %>
     </div>
   </div>
-</div> 
+</section>
+

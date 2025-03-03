@@ -1,46 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Ian Buchanan</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ian Buchanan - Software Engineer & Accessibility Advocate</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= yield :head %>
-
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
-
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app %>
-
-    <%= vite_client_tag %>
-    <%= vite_javascript_tag 'application' %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= vite_client_tag %>
-    <%= vite_javascript_tag 'application' %>
-    <!--
-      If using a TypeScript entrypoint file:
-        vite_typescript_tag 'application'
-
-      If using a .jsx or .tsx entrypoint, add the extension:
-        vite_javascript_tag 'application.jsx'
-
-      Visit the guide for more information: https://vite-ruby.netlify.app/guide/rails
-    -->
-
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_importmap_tags %>
   </head>
-
-  <body>
-    <header class="text-center py-8">
-      <h1 class="text-4xl font-bold mb-2">Ian Buchanan</h1>
-      <h2 class="text-2xl text-gray-600">Software Engineer | Accessibility Advocate</h2>
+  <body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-sm">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="flex justify-between items-center">
+          <h1 class="text-2xl font-bold">Ian Buchanan</h1>
+          <h2>Software Engineer | Fullstack | Frontend | React | Vue.js | Node.js | Accessibility Advocate</h2>
+          <div class="space-x-4">
+            <a href="#about" class="text-gray-600 hover:text-gray-900">About</a>
+            <a href="#experience" class="text-gray-600 hover:text-gray-900">Experience</a>
+            <a href="#projects" class="text-gray-600 hover:text-gray-900">Projects</a>
+            <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a>
+          </div>
+        </div>
+      </nav>
     </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <%= yield %>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="flex justify-center space-x-4">
+        <a href="mailto:get.ian.buchanan@gmail.com" class="text-blue-600 hover:text-blue-800">Email</a>
+        <a href="https://github.com/yourusername" class="text-blue-600 hover:text-blue-800">GitHub</a>
+        <a href="https://linkedin.com/in/yourusername" class="text-blue-600 hover:text-blue-800">LinkedIn</a>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p>&copy; <%= Time.current.year %> Ian Buchanan. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
