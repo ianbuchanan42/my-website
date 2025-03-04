@@ -1,0 +1,54 @@
+<section class="mb-16">
+  <h2 class="text-3xl font-bold mb-8">Experience</h2>
+  
+  <div class="mb-12">
+    <h3 class="text-2xl font-bold mb-4 text-center">Codesmith</h3>
+    <%= render(ProjectComponent.new(
+        title: "Codesmith",
+        image_url: "https://www.codesmith.io/hubfs/Link.svg",
+        summary: "Advanced Software Engineering Residency - Intensive 13-week program focused on advanced software engineering concepts, full-stack development, and technical leadership.",
+        tech_stack: ["TypeScript", "JavaScript", "Node.js", "AI/ML"],
+        website_url: "https://www.codesmith.io/"
+      )) %>
+    <h3 class="text-2xl font-bold mb-4 text-center">Non-profits</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <%= render(ProjectComponent.new(
+        title: "Smuin Contemporary Ballet",
+        image_url: "https://www.smuinballet.org/app/uploads/Website-Pop-Up-Tray-Image-800x450-1.png",
+        summary: "Collaborated with Gameflow Interactive to design and deploy engaging websites, customizing templates with HTML and CSS for functionality and design. Ensured WCAG compliance through screen reader testing and enhanced user experience. Led knowledge-sharing initiatives and onboarding sessions to empower clients in managing their CMS and maintaining accessibility best practices.",
+        tech_stack: ["Wordpress", "HTML", "CSS"],
+        website_url: "https://www.smuinballet.org/"
+      )) %>
+      
+      <%= render(ProjectComponent.new(
+        title: "Project 2",
+        image_url: "https://www.sacballet.org/app/uploads/SM_BB_400x300.png",
+        summary: "Collaborated with Gameflow Interactive to design and deploy engaging websites, customizing templates with HTML and CSS for functionality and design. Ensured WCAG compliance through screen reader testing and enhanced user experience. Led knowledge-sharing initiatives and onboarding sessions to empower clients in managing their CMS and maintaining accessibility best practices.",
+        tech_stack:  ["Wordpress", "HTML", "CSS"],
+        website_url: "https://www.sacballet.org/"
+      )) %>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="text-2xl font-bold mb-4">Past Projects</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <%= render(ProjectComponent.new(
+        title: "Steve Coleman Acupuncture & Bodywork",
+        image_url: "https://img1.wsimg.com/isteam/ip/103a6c80-9605-4cc2-9577-3a5a15505222/_DSC6534.jpg/:/rs=w:2560,h:1696",
+        summary: "Managed client website transition, transferred DNS hosting, upgraded to a modern content management system, and refined content and branding to elevate their online presence.",
+        tech_stack: ["DNS",'SEO',"Design"],
+        website_url: "https://steveacupuncture.com/"
+      )) %>
+      
+      <%= render(ProjectComponent.new(
+        title: "Past Project 2",
+        image_url: "path/to/past-project2.jpg",
+        summary: "Description of past project 2",
+        tech_stack: ["Angular", "Node.js", "MongoDB"],
+        github_url: "https://github.com/yourusername/past-project2",
+        website_url: "https://past-project2.com"
+      )) %>
+    </div>
+  </div>
+</section> 

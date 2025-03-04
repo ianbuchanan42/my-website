@@ -66,7 +66,7 @@ class ProjectComponent < ViewComponent::Base
     Rails.logger.debug "Processing tech tag: #{tech}"
     color = case tech.downcase
     when /react/
-      "bg-[#61DAFB]/10 text-[#61DAFB] border border-[#61DAFB]/20"
+      "bg-sky-500/10 text-sky-500 border border-sky-500/30"
     when /vue/
       "bg-[#42B883]/10 text-[#42B883] border border-[#42B883]/20"
     when /angular/
@@ -76,7 +76,7 @@ class ProjectComponent < ViewComponent::Base
     when /node/
       "bg-[#68A063]/10 text-[#68A063] border border-[#68A063]/20"
     when /javascript/
-      "bg-[#F7DF1E]/10 text-[#F7DF1E] border border-[#F7DF1E]/20"
+      "bg-[#E5B800]/10 text-[#E5B800] border border-[#E5B800]/20"
     when /typescript/
       "bg-[#3178C6]/10 text-[#3178C6] border border-[#3178C6]/20"
     when /html/
@@ -132,7 +132,7 @@ class ProjectComponent < ViewComponent::Base
     link_to(website_url, class: "inline-flex items-center text-blue-600 hover:text-blue-800", target: "_blank", rel: "noopener noreferrer") do
       safe_join([
         website_icon,
-        "#{title} Website"
+        "Live Demo"
       ])
     end
   end

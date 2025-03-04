@@ -10,4 +10,9 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   root "home#index"
+  get "experience", to: "experience#index"
+  get "blog", to: "blog#index"
+  get "about", to: "about#index"
+  get "contact", to: "contact#index"
+  post "contact", to: "contact#create"
 end
