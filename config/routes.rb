@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  root "home#index"
+  root "pages#home"
+
+  get "experience", to: "pages#experience"
+  get "about", to: "pages#about"
+  get "contact", to: "pages#contact"
+  post "contact", to: "pages#send_contact_email"
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
