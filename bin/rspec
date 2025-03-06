@@ -1,0 +1,2 @@
+#!/bin/bash
+bundle exec $(bundle show rspec-core)/exe/rspec "$@" 
