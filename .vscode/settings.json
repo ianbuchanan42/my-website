@@ -1,0 +1,20 @@
+{
+  "files.associations": {
+    "*.erb": "erb"
+  },
+  "emmet.includeLanguages": {
+    "erb": "html"
+  },
+  "tailwindCSS.includeLanguages": {
+    "erb": "html",
+    "ruby": "html"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    "class[Name]*: '([^']*)'",
+    "class[Name]*: \"([^\"]*)\"",
+    "class[Name]*: `([^`]*)`"
+  ],
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}
