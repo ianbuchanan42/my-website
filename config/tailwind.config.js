@@ -1,13 +1,16 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+  mode: 'jit',
+  darkMode: 'class',
   content: [
-    './app/views/**/*.{erb,haml,html,slim}',
+    './public/*.html',
     './app/helpers/**/*.rb',
-    './app/assets/stylesheets/**/*.css',
     './app/javascript/**/*.js',
-    './app/components/**/*.{erb,rb}', // Add components directory
+    './app/views/**/*.{erb,haml,html,slim}',
+    './app/components/**/*.{erb,rb,html}',
     './config/initializers/simple_form.rb',
+    './app/assets/stylesheets/**/*.css',
   ],
   theme: {
     extend: {
@@ -21,4 +24,7 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
   ],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 };

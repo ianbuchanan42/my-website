@@ -1,7 +1,7 @@
-<section class="mb-16">
-  <h2 class="text-3xl font-bold mb-8">Contact Me</h2>
+<section class="flex flex-col items-center justify-center py-16">
+  <h2 class="text-3xl font-bold text-center mb-12">Contact Me</h2>
   
-  <div class="max-w-2xl mx-auto">
+  <div class="w-full px-6 sm:max-w-2xl sm:mx-auto">
     <%= helpers.form_with(url: contact_path, method: :post, class: "space-y-6", 
         data: { controller: "contact-form" }) do |f| %>
       <div>
@@ -22,6 +22,4 @@
       <%= f.submit "Send Message", class: "w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500", data: { contact_form_target: "submit" } %>
     <% end %>
   </div>
-
- 
 </section> 

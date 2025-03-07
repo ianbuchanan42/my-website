@@ -117,22 +117,38 @@ class ProjectComponent < ViewComponent::Base
 
   def tech_tag_color(tech)
     case tech.downcase
+    when /html/
+      "bg-[#E34F26]/10 text-[#D44320] border border-[#E34F26]/20" # Orange shade from HTML5 logo
+    when /accessibility|a11y|wcag/i
+      "bg-[#2A4365]/10 text-[#2C5282] border border-[#2A4365]/20" # Professional dark blue for accessibility
+    when /css/
+      "bg-[#1572B6]/10 text-[#0056B3] border border-[#1572B6]/20" # Blue shade from CSS3 logo
+    when /javascript/
+      "bg-[#F7DF1E]/10 text-[#947600] border border-[#F7DF1E]/20" # Yellow from JS logo with accessible text
+    when /tailwind/
+      "bg-[#38BDF8]/10 text-[#0284C7] border border-[#38BDF8]/20" # Tailwind's blue
+    when /next\.?js/
+      "bg-[#000000]/10 text-[#404040] border border-[#000000]/20" # Next.js black
+    when /content.?management/i
+      "bg-[#34D399]/10 text-[#047857] border border-[#34D399]/20" # Green for CMS
+    when /ai|ml|machine.?learning/i
+      "bg-[#8B5CF6]/10 text-[#6D28D9] border border-[#8B5CF6]/20" # Purple for AI/ML
+    when /vs.?code/i
+      "bg-[#007ACC]/10 text-[#0056B3] border border-[#007ACC]/20" # VS Code blue
     when /react/
-      "bg-[#61DAFB]/10 text-[#61DAFB] border border-[#61DAFB]/20"
+      "bg-[#61DAFB]/10 text-[#087EA4] border border-[#61DAFB]/20" # React blue
     when /typescript/
-      "bg-[#3178C6]/10 text-[#3178C6] border border-[#3178C6]/20"
-    when /vue/
-      "bg-[#42B883]/10 text-[#42B883] border border-[#42B883]/20"
-    when /node/
-      "bg-[#68A063]/10 text-[#68A063] border border-[#68A063]/20"
-    when /api/
-      "bg-purple-100 text-purple-800 border border-purple-200"
-    when /vs code/
-      "bg-[#007ACC]/10 text-[#007ACC] border border-[#007ACC]/20"
-    when /koa/
-      "bg-[#68A063]/10 text-[#68A063] border border-[#68A063]/20"
+      "bg-[#3178C6]/10 text-[#235A97] border border-[#3178C6]/20" # TypeScript blue
+    when /vue\.?js/
+      "bg-[#42B883]/10 text-[#2F855A] border border-[#42B883]/20" # Vue green
+    when /koa\.?js/
+      "bg-[#33333D]/10 text-[#1F1F29] border border-[#33333D]/20" # Koa's dark theme
+    when /supabase/
+      "bg-[#3ECF8E]/10 text-[#0F766E] border border-[#3ECF8E]/20" # Supabase green
+    when /node\.?js/
+      "bg-[#68A063]/10 text-[#2F6B29] border border-[#68A063]/20" # Node green
     else
-      "bg-gray-100 text-gray-800 border border-gray-200"
+      "bg-gray-100 text-gray-700 border border-gray-200"
     end
   end
 

@@ -1,11 +1,11 @@
-<header class="bg-gray-800 shadow-sm">
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+<header class="bg-gray-800 shadow-sm relative" data-controller="header">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" aria-label="Main navigation">
     <div class="flex items-center justify-between h-16">
       <div class="flex items-center space-x-4">
         <div class="flex-shrink-0">
-          <%= link_to root_path, class: "text-white font-bold text-lg sm:text-xl after:content-['-_Software_Engineer'] after:text-gray-300 after:font-normal after:text- after:ml-1", aria_label: "Home" do %>
+          <h1><%= link_to root_path, class: "text-white font-bold text-lg sm:w-max sm:m-auto after:content-['-_Software_Engineer'] after:text-gray-400 after:font-normal after:text- after:ml-1", aria_label: "Home" do %>
             Ian Buchanan
-          <% end %>
+          <% end %></h1>
         </div> 
       </div>
 
@@ -19,7 +19,11 @@
       </div>
      
       <div class="md:hidden">
-        <button type="button" class="text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+        <button type="button" 
+                class="text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" 
+                aria-controls="mobile-menu" 
+                aria-expanded="false"
+                data-action="click->header#toggle">
           <span class="sr-only">Open main menu</span>
           <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -30,12 +34,25 @@
   </nav>
 
   <!-- Mobile menu -->
-  <div class="md:hidden hidden" id="mobile-menu">
+  <div class="md:hidden hidden relative z-10" id="mobile-menu" data-header-target="menu">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       <%= link_to "Home", root_path, class: "block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700", aria_current: current_page?(root_path) ? "page" : nil %>
       <%= link_to "Experience", experience_path, class: "block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700", aria_current: current_page?(experience_path) ? "page" : nil %>
       <%= link_to "About", about_path, class: "block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700", aria_current: current_page?(about_path) ? "page" : nil %>
       <%= link_to "Contact", contact_path, class: "block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700", aria_current: current_page?(contact_path) ? "page" : nil %>
+    </div>
+  </div>
+
+  <!-- Red tag -->
+  <div class="absolute left-0 bottom-0 -z-10">
+    <div class="relative">
+      <div class="absolute transform -rotate-45 translate-x-[-35%] translate-y-[-10%] bg-red-600 text-white px-12 pt-10 py-1 shadow-md">
+        <p class="text-md font-medium whitespace-nowrap text-center">
+          Tailwind
+          <br>
+          Ruby on Rails
+        </p>
+      </div>
     </div>
   </div>
 </header>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-full bg-gray-800">
   <head>
     <title><%= content_for(:title) || "My Website" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -23,10 +23,12 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-gray-100">
-    <%= render Layout::HeaderComponent.new(current_page: request.path) %>
+  <body class="h-full flex flex-col bg-gray-800">
+    <div class="relative z-10">
+      <%= render Layout::HeaderComponent.new(current_page: request.path) %>
+    </div>
     
-    <main>
+    <main class="flex-grow bg-gray-100 relative z-0">
       <%= yield %>
     </main>
 

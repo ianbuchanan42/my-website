@@ -1,9 +1,11 @@
 {
   "files.associations": {
-    "*.erb": "erb"
+    "*.erb": "erb",
+    "*.html.erb": "erb"
   },
   "emmet.includeLanguages": {
-    "erb": "html"
+    "erb": "html",
+    "ruby": "html"
   },
   "tailwindCSS.includeLanguages": {
     "erb": "html",
@@ -12,9 +14,22 @@
   "tailwindCSS.experimental.classRegex": [
     "class[Name]*: '([^']*)'",
     "class[Name]*: \"([^\"]*)\"",
-    "class[Name]*: `([^`]*)`"
+    "class[Name]*: `([^`]*)`",
+    "className=\"([^\"]*)",
+    "class=\"([^\"]*)",
+    "class: '([^']*)'",
+    ["\\bclass:\\s*\"([^\"]*)\"", "\"([^\"]*)\""]
   ],
   "editor.quickSuggestions": {
-    "strings": true
-  }
+    "strings": true,
+    "comments": "on",
+    "other": "on"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "editor.suggest.showStatusBar": true,
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.suggestions": true,
+  "tailwindCSS.validate": true,
+  "tailwindCSS.hovers": true,
+  "css.validate": false
 }
